@@ -4,12 +4,14 @@ module.exports = function(grunt) {
     assemble: {
       site: {
         options: {
-          data: ['config.yml']
+          data: ['config.yml'],
+          flatten: true
         },
         files: [
-          { src: 'src/pages/1.hbs', dest: 'dest/1.html' },
-          { src: 'src/pages/2.hbs', dest: 'dest/2.html' },
-          { src: 'src/pages/3.hbs', dest: 'dest/3.html' },
+          {
+            src: 'src/pages/**/*.hbs',
+            dest: 'dest/'
+          }
         ]
       }
     }
