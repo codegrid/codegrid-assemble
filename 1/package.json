@@ -1,0 +1,7 @@
+{
+  "name": "codegrid-assemble",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "assemble": "~0.4.4"
+  }
+}

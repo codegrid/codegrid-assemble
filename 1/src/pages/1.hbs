@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>{{config.siteName}}</title>
+</head>
+<body>
+<h1>{{config.siteName}}</h1>
+<hr>
+<p>Hello CodeGrid!</p>
+<hr>
+<ul>
+  {{#each config.footerLinks}}
+    <li><a href="{{url}}">{{title}}</a></li>
+  {{/each}}
+</ul>
+</body>
+</html>
