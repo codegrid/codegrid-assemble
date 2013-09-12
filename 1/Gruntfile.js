@@ -2,7 +2,7 @@ module.exports = function(grunt) {
   grunt.task.loadNpmTasks('assemble');
   grunt.initConfig({
     assemble: {
-      pages: {
+      site: {
         options: {
           data: ['config.yml']
         },
