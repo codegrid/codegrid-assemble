@@ -1,0 +1,9 @@
+<ul>
+  {{#each nav}}
+    {{#is page_id ../page.id}}
+      <li>{{title}}</li>
+    {{else}}
+      <li><a href="{{url}}">{{title}}</a></li>
+    {{/is}}
+  {{/each}}
+<ul>

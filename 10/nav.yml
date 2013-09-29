@@ -1,0 +1,11 @@
+- page_id: top
+  title: top page
+  url: /
+
+- page_id: company_index
+  title: company index page
+  url: /company/
+
+- page_id: company_history_index
+  title: company history index page
+  url: /company/history/
