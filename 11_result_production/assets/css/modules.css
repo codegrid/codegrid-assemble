@@ -1,0 +1,14 @@
+.header {
+  background: #333;
+  color:#fff;
+  padding:10px;
+  text-align:center;
+}
+.body {
+  padding:10px;
+}
+.footer {
+  background: #333;
+  color:#fff;
+  padding:10px;
+}

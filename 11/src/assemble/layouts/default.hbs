@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>PAGE TITLE!</title>
+{{#if production}}
+  <link rel="stylesheet" href="{{assets}}/css/base.min.css">
+  <link rel="stylesheet" href="{{assets}}/css/modules.min.css">
+  <script src="{{assets}}/js/library-a.min.js"></script>
+  <script src="{{assets}}/js/library-b.min.js"></script>
+{{/if}}
+{{#if dev}}
+  <link rel="stylesheet" href="{{assets}}/css/base.css">
+  <link rel="stylesheet" href="{{assets}}/css/modules.css">
+  <script src="{{assets}}/js/library-a.js"></script>
+  <script src="{{assets}}/js/library-b.js"></script>
+{{/if}}
+</head>
+<body>
+{{> header}}
+<div class="body">
+  {{> body}}
+</div>
+{{> footer}}
+</body>
+</html>
