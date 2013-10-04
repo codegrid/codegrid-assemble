@@ -23,16 +23,16 @@ module.exports = function(grunt) {
     assets: 'dest/assets',
     partials: 'src/assemble/partials/**/*.hbs'
   };
-  var assembleconf_options_dev = _.extend({},
-    assembleconf_options_common, {
-    dev: true,
-    production: false
-  });
-  var assembleconf_options_production = _.extend({},
-    assembleconf_options_common, {
-    dev: false,
-    production: true
-  });
+  var assembleconf_options_dev = _.extend(
+    {},
+    assembleconf_options_common,
+    { dev: true, production: false }
+  );
+  var assembleconf_options_production = _.extend(
+    {},
+    assembleconf_options_common,
+    { dev: false, production: true }
+  );
 
   grunt.initConfig({
 
