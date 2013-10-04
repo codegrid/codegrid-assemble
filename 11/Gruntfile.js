@@ -10,7 +10,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('assemble');
 
-  // create assemble config
+  // assembleのコンフィグとして指定する値を用意
 
   var assembleconf_files = [{
     expand: true,
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
-    /* standard compilings */
+    /* 基本的な処理 */
 
     assemble: {
       dev: {
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
       }
     },
 
-    /* cleanup */
+    /* ファイル／ディレクトリ削除 */
 
     clean: {
       dest: 'dest',
@@ -79,7 +79,20 @@ module.exports = function(grunt) {
       css: '<%= copy.css.dest %>'
     },
 
-    /* for performance */
+    /* 画像容量削減 */
+
+    imagemin: {
+      imgs: {
+        files: [{
+          expand: true,
+          cwd: 'src/assets/imgs',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'dest/assets/imgs'
+        }]
+      }
+    },
+
+    /* HTML minify */
 
     htmlmin: {
       all: {
@@ -94,16 +107,7 @@ module.exports = function(grunt) {
       }
     },
 
-    imagemin: {
-      imgs: {
-        files: [{
-          expand: true,
-          cwd: 'src/assets/imgs',
-          src: ['**/*.{png,jpg,gif}'],
-          dest: 'dest/assets/imgs'
-        }]
-      }
-    },
+    /* CSS minify */
 
     cssmin: {
       all: {
@@ -114,6 +118,8 @@ module.exports = function(grunt) {
         ext: '.min.css'
       }
     },
+
+    /* JavaScript minify */
 
     uglify: {
       library_a: {
@@ -149,7 +155,7 @@ module.exports = function(grunt) {
 
   });
 
-  // define tasks
+  // タスク定義
 
   grunt.registerTask('build:dev', [
     'clean',
