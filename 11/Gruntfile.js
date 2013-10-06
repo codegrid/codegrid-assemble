@@ -9,7 +9,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('assemble');
 
-  // assembleのコンフィグとして指定する値を用意
+  /* assembleのコンフィグとして指定する値を用意 */
 
   var _ = grunt.util._;
   var assembleconf_files = [{
