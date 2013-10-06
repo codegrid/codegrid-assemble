@@ -1,11 +1,6 @@
-- page_id: top
-  title: top page
-  url: /
-
-- page_id: company_index
-  title: company index page
-  url: /company/
-
-- page_id: company_history_index
-  title: company history index page
-  url: /company/history/
+- title: top page
+  url: dest/index.html
+- title: company index page
+  url: dest/company/index.html
+- title: company history index page
+  url: dest/company/history/index.html

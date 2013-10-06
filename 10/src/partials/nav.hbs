@@ -1,9 +1,9 @@
 <ul>
   {{#each nav}}
-    {{#is page_id ../page.id}}
+    {{#is url ../page.dest}}
       <li>{{title}}</li>
     {{else}}
-      <li><a href="{{url}}">{{title}}</a></li>
+      <li><a href="{{relative ../../page.dest url}}">{{title}}</a></li>
     {{/is}}
   {{/each}}
 <ul>
