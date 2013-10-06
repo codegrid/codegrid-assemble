@@ -20,7 +20,7 @@ module.exports = function(grunt) {
   }];
   var assembleconf_options_common = {
     layout: 'src/assemble/layouts/default.hbs',
-    assets: 'dest/assets',
+    assets: 'dest/assets/',
     partials: 'src/assemble/partials/**/*.hbs'
   };
   var assembleconf_options_dev = _.extend(
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
-    /* 基本的な処理 */
+    /* assemble */
 
     assemble: {
       dev: {
@@ -48,6 +48,8 @@ module.exports = function(grunt) {
         files: assembleconf_files
       }
     },
+
+    /* コピー */
 
     copy: {
       imgs: {
@@ -112,7 +114,7 @@ module.exports = function(grunt) {
     cssmin: {
       all: {
         expand: true,
-        cwd: 'src/assets/css',
+        cwd: 'src/assets/css/',
         src: ['*.css'],
         dest: 'dest/assets/css/',
         ext: '.min.css'
@@ -155,15 +157,15 @@ module.exports = function(grunt) {
 
   });
 
-  // タスク定義
+  /* タスク定義 */
 
   grunt.registerTask('build:dev', [
-    'clean',
+    'clean:dest',
     'assemble:dev',
     'copy'
   ]);
   grunt.registerTask('build:production', [
-    'clean',
+    'clean:dest',
     'assemble:production',
     'copy:js',
     'copy:css',
