@@ -124,13 +124,12 @@ module.exports = function(grunt) {
     /* JavaScript minify */
 
     uglify: {
-      library_a: {
-        src: 'src/assets/js/library-a.js',
-        dest: 'dest/assets/js/library-a.min.js'
-      },
-      library_b: {
-        src: 'src/assets/js/library-b.js',
-        dest: 'dest/assets/js/library-b.min.js'
+      all: {
+        expand: true,
+        cwd: 'src/assets/js/',
+        src: ['*.js'],
+        dest: 'dest/assets/js/',
+        ext: '.min.js'
       }
     },
 
