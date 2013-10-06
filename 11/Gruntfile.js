@@ -1,6 +1,5 @@
 module.exports = function(grunt) {
 
-  var _ = grunt.util._;
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -12,6 +11,7 @@ module.exports = function(grunt) {
 
   // assembleのコンフィグとして指定する値を用意
 
+  var _ = grunt.util._;
   var assembleconf_files = [{
     expand: true,
     cwd: 'src/assemble/pages/',
